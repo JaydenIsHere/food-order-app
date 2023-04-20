@@ -31,7 +31,7 @@ const DUMMY_MEALS = [
   const AvailableMealsList = () =>{
     
     return (
-      <section claaName={classes.meals}>
+      <section className={classes.meals}>
         <Card>
         <ul>
         {
