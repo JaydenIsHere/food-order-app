@@ -2,6 +2,7 @@ import { useState } from "react";
 import Cart from "./components/Cart/Cart";
 import Header from "./components/Layout/Header";
 import Meals from "./components/Meals/Meals";
+import CartProvider from "./store/cartProvider";
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
   }
   const cartContent = isModalOpen ? <Cart onToggleModal = {onToggleModal}/> : null
   return (
-    <div>
+    <CartProvider>
       {cartContent}
       <Header onToggleModal = {onToggleModal}/>
       <h2>Let's get started!</h2>
@@ -19,7 +20,7 @@ function App() {
       <Meals></Meals>
       
       </main>
-    </div>
+    </CartProvider>
   );
 }
 
